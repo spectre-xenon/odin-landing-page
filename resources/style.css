@@ -10,6 +10,12 @@
   src: url("./font/determinationsanswebregular-369x-webfont.woff");
 }
 
+img {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -241,7 +247,7 @@ audio {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  animation: header-rotate 2s ease-in-out infinite;
+  animation: header-rotate 3s ease-in-out infinite;
 }
 
 @keyframes header-rotate {
@@ -277,19 +283,19 @@ audio {
   line-height: normal;
 }
 
-#undyne-h4{
+#undyne-h4 {
   top: 30%;
   left: 1%;
   rotate: -20deg;
 }
 
-#mettaton-h4{
+#mettaton-h4 {
   rotate: 5deg;
   top: 12%;
   left: 35%;
 }
 
-#papyrus-h4{
+#papyrus-h4 {
   rotate: 28deg;
   left: 83%;
   top: 16%;
@@ -332,10 +338,237 @@ audio {
   flex: auto;
   height: 30%;
   color: var(--text);
-  animation: shine 1s linear infinite;
   text-align: center;
   font-family: Determination Sans Web;
   font-size: 61px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#third-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+#third-section .text-container {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-container h2 {
+  flex: auto;
+  height: 30%;
+  padding-top: 10%;
+  display: block;
+  color: var(--text);
+  text-align: center;
+  font-family: Determination Sans Web;
+  font-size: 71px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  animation: header-rotate 3s ease-in-out infinite;
+}
+
+.text-container ul {
+  flex: auto;
+  height: 60%;
+  color: var(--text);
+  text-align: left;
+  font-family: Determination Sans Web;
+  font-size: 41px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 15%;
+}
+
+.text-container ul li {
+  padding-bottom: 20px;
+}
+
+#butter-scotch {
+  background: linear-gradient(
+    90deg,
+    var(--primary) 20%,
+    var(--secondary) 40%,
+    var(--secondary) 60%,
+    var(--primary) 80%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 1s linear infinite;
+}
+
+.toriel-container {
+  flex: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.toriel-container img {
+  flex: auto;
+  object-fit: contain;
+}
+
+.toriel-h3 {
+  padding-top: 10%;
+  flex: auto;
+  flex: auto;
+  height: 30%;
+  color: var(--text);
+  text-align: center;
+  font-family: Determination Sans Web;
+  font-size: 61px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#fourth-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: relative;
+}
+
+#fourth-section .text-container-muffet {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-container-muffet h2 {
+  flex: auto;
+  height: 30%;
+  padding-top: 10%;
+  display: block;
+  color: var(--text);
+  text-align: center;
+  font-family: Determination Sans Web;
+  font-size: 71px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  animation: header-rotate 3s ease-in-out infinite;
+}
+
+.text-container-muffet ul {
+  flex: auto;
+  height: 60%;
+  color: var(--text);
+  text-align: left;
+  font-family: Determination Sans Web;
+  font-size: 41px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 5%;
+}
+
+.text-container-muffet ul li {
+  padding-bottom: 20px;
+}
+
+#muffet-ost-butt {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--accent);
+  border-radius: 11px;
+  width: 30%;
+  height: 20%;
+  border: none;
+  align-self: flex-start;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+  color: var(--text);
+  font-family: Determination Sans Web;
+  font-size: 41px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#muffet-ost-butt:hover {
+  cursor: pointer;
+  background: var(--text);
+  rotate: -2deg;
+  color: var(--background);
+}
+
+#muffet-pet {
+  background-image: url("./imgs/muffet-pet.webp");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  position: absolute;
+  left: 95%;
+  top: 88%;
+  height: 90px;
+  width: 90px;
+  z-index: 100;
+}
+
+#fifth-section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+#fifth-section p {
+  display: flex;
+  width: 759px;
+  height: 602.971px;
+  transform: rotate(1.926deg);
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+
+  position: absolute;
+  top: 47%;
+  color: var(--text);
+  text-align: center;
+  font-family: Determination Sans Web;
+  font-size: 71px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#flowey {
+  position: absolute;
+  width: 322px;
+  height: 365px;
+  top: 198px;
+  left: 793px;
+}
+
+#toby-fox {
+  position: absolute;
+  top: 95%;
+  left: 95%;
+}
+
+footer {
+  height: 6vh;
+  width: 100vw;
+  background: #251a32;
+  display: flex;
+  padding-left: 1%;
+}
+
+footer p {
+  flex: auto;
+  align-self: center;
+  color: #34383b;
+  font-family: Determination Sans Web;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
