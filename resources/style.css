@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: Determination Sans Web;
+  src: url("./font/determinationsanswebregular-369x-webfont.woff");
+}
+
+:root {
+  --text: #e7f4fe;
+  --text-lighter: #d1e0eb;
+  --background: #000000;
+  --primary: #4bbaf7;
+  --secondary: #bd87ff;
+  --accent: #6b00ed;
+}
+
+html {
+  background-color: var(--background);
+}
+
+header {
+  height: 100vh;
+  width: 100vw;
+}
+
+nav {
+  display: block;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 100%;
+  display: flex;
+}
+
+nav a {
+  flex: 1;
+  align-self: center;
+  text-decoration: none;
+  text-align: center;
+  font-family: Determination Sans Web;
+  color: var(--text-lighter);
+  font-size: 30px;
+}
+
+#new {
+  display: inline-block;
+  width: 30%;
+  background-color: var(--secondary);
+  border-radius: 4px;
+  color: #000000;
+}
+
+nav #soul {
+  position: relative;
+  width: 40px;
+  top: 25%;
+  left: 2%;
+  margin-right: 45%;
+  object-fit: contain;
+  align-self: flex-start;
+}
+
+.header-content {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.header-content .header-text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text-container h1 {
+  flex: 1;
+  font-family: Determination Sans Web;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--text);
+  font-size: 91px;
+  padding-left: 20%;
+  padding-top: 15%;
+  padding-bottom: 5%;
+}
+
+#awesome {
+  background: linear-gradient(90deg, #4bbaf7 0%, #bd87ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-text-container input {
+  flex: 1;
+  background: linear-gradient(90deg, var(--accent) 0%, #bd87ff 100%);
+  border-radius: 11px;
+  color: var(--text);
+  border: none;
+  text-align: center;
+  font-family: Determination Sans Web;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 20%;
+  margin-bottom: 30%;
+  margin-right: 50%;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+
+.header-text-container input:hover {
+  cursor: pointer;
+  background: var(--text);
+  color: var(--background);
+  rotate: -2deg;
+}
+
+.header-content .header-sans {
+  width: 50%;
+  background-image: url("./imgs/header-sans.webp");
+  background-repeat: no-repeat;
+  background-size: 55vw;
+  background-position: 0%;
+}
+
+audio {
+  display: none;
+}
+
+.block-phone {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .block-phone {
+    display: block;
+    position: absolute;
+    background-color: var(--background);
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 600px;
+    justify-content: center;
+    align-content: center;
+    font-size: 40px;
+  }
+
+  .block-phone h1 {
+    flex:1 1 auto;
+    font-family: Determination Sans Web;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--text);
+  }
+}

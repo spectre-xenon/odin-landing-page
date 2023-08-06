@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./resources/style.css" />
+    <script src="./resources/app.js"></script>
     <title>Document</title>
   </head>
   <body>
+
     <header>
       <nav>
-        <img src="./resources/imgs/Soul.png" id="soul" alt="Soul" />
+        <img src="./resources/imgs/Soul.png" id="soul" alt="soul"  onmouseover="hover(this);" onmouseout="hoverOut(this)"/>
         <a href="">Sans</a>
         <a href="">Papyrus</a>
         <a href="">Kris <span id="new">New!</span></a>
@@ -17,11 +19,17 @@
       </nav>
       <div class="header-content">
         <div class="header-text-container">
-          <h1 class="header-text"></h1>
-          <button></button>
+          <h1 class="header-text">
+            This website is <span id="awesome">AWESOME!</span>
+          </h1>
+          <input type="button" value="Why?" onclick="play()" >Why?</input>
+          <audio id="spear-of-justise" src="./resources/music/Spear of Justice.mp3"></audio>
         </div>
         <div class="header-sans"></div>
       </div>
     </header>
+    </section>
+
+    <div class="block-phone"><h1> Open PC</h1></div>
   </body>
 </html>
