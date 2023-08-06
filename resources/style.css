@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -19,24 +20,38 @@
 
 html {
   background-color: var(--background);
+  scroll-behavior: smooth;
+}
+body {
+  width: 100vw;
 }
 
 header {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 nav {
-  display: block;
+  position: relative;
   top: 0;
   left: 0;
   height: 10%;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  gap: 45%;
+  align-content: center;
+  justify-content: space-around;
+  padding-left: 1%;
 }
 
-nav a {
-  flex: 1;
+.nav-links {
+  flex: auto;
+  display: flex;
+}
+
+.nav-links a {
+  flex: auto;
   align-self: center;
   text-decoration: none;
   text-align: center;
@@ -46,7 +61,8 @@ nav a {
 }
 
 #new {
-  display: inline-block;
+  display: inline-grid;
+  display: -moz-inline-grid;
   width: 30%;
   background-color: var(--secondary);
   border-radius: 4px;
@@ -54,11 +70,10 @@ nav a {
 }
 
 nav #soul {
-  position: relative;
   width: 40px;
+  height: 40px;
   top: 25%;
   left: 2%;
-  margin-right: 45%;
   object-fit: contain;
   align-self: flex-start;
 }
@@ -67,63 +82,89 @@ nav #soul {
   height: 90%;
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  align-content: center;
 }
 
 .header-content .header-text-container {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding-left: 10%;
 }
 
 .header-text-container h1 {
-  flex: 1;
+  display: block;
+  flex: 1 1 auto;
   font-family: Determination Sans Web;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   color: var(--text);
   font-size: 91px;
-  padding-left: 20%;
-  padding-top: 15%;
-  padding-bottom: 5%;
+  padding-top: 20%;
+  height: 30%;
+  float: center;
+  overflow: hidden;
 }
 
 #awesome {
-  background: linear-gradient(90deg, #4bbaf7 0%, #bd87ff 100%);
+  background: linear-gradient(
+    90deg,
+    var(--primary) 20%,
+    var(--secondary) 40%,
+    var(--secondary) 60%,
+    var(--primary) 80%
+  );
+  background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: shine 1s linear infinite;
 }
 
-.header-text-container input {
-  flex: 1;
-  background: linear-gradient(90deg, var(--accent) 0%, #bd87ff 100%);
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.header-text-container span {
+  flex: 1 1 auto;
+  height: 50%;
+}
+
+.header-text-container button {
+  background-color: var(--accent);
   border-radius: 11px;
-  color: var(--text);
+  width: 30%;
+  height: 20%;
   border: none;
+  align-self: flex-start;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+.header-text-container button a {
+  color: var(--text);
+  text-decoration: none;
   text-align: center;
   font-family: Determination Sans Web;
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-left: 20%;
-  margin-bottom: 30%;
-  margin-right: 50%;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
 }
 
-.header-text-container input:hover {
+.header-text-container button:hover {
   cursor: pointer;
   background: var(--text);
-  color: var(--background);
   rotate: -2deg;
+}
+.header-text-container button a:hover {
+  color: var(--background);
 }
 
 .header-content .header-sans {
   width: 50%;
+  overflow: hidden;
   background-image: url("./imgs/header-sans.webp");
   background-repeat: no-repeat;
   background-size: 55vw;
@@ -136,6 +177,12 @@ audio {
 
 .block-phone {
   display: none;
+}
+
+#second-section {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(180deg, #000 0%, #8c00e3 100%);
 }
 
 @media only screen and (max-width: 600px) {
@@ -153,7 +200,7 @@ audio {
   }
 
   .block-phone h1 {
-    flex:1 1 auto;
+    flex: 1 1 auto;
     font-family: Determination Sans Web;
     font-style: normal;
     font-weight: 400;

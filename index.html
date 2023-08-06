@@ -8,28 +8,45 @@
     <title>Awesome landing page</title>
   </head>
   <body>
-
     <header>
       <nav>
-        <img src="./resources/imgs/Soul.png" id="soul" alt="soul"  onmouseover="hover(this);" onmouseout="hoverOut(this)"/>
-        <a href="">Sans</a>
-        <a href="">Papyrus</a>
-        <a href="">Kris <span id="new">New!</span></a>
-        <a href="">Chara?</a>
+        <img
+          src="./resources/imgs/Soul.png"
+          id="soul"
+          alt="soul"
+          onmouseover="hover(this);"
+          onmouseout="hoverOut(this)"
+        />
+        <div class="nav-links">
+          <a href="">Sans</a>
+          <a href="">Papyrus</a>
+          <a href="">Kris <span id="new">New!</span></a>
+          <a href="">Chara?</a>
+        </div>
       </nav>
       <div class="header-content">
         <div class="header-text-container">
           <h1 class="header-text">
             This website is <span id="awesome">AWESOME!</span>
           </h1>
-          <input type="button" value="Why?" onclick="play()" >Why?</input>
-          <audio id="spear-of-justise" src="./resources/music/Spear of Justice.mp3"></audio>
+          <span
+            ><button onclick="play()">
+              <a href="#second-section">Why?</a>
+            </button>
+          </span>
+          <audio
+            id="spear-of-justise"
+            src="./resources/music/Spear of Justice.mp3"
+          ></audio>
         </div>
         <div class="header-sans"></div>
       </div>
     </header>
-    </section>
 
-    <div class="block-phone"><h1> Open PC</h1></div>
+    <section id="second-section"></section>
+
+    <div class="block-phone"><h1>Open PC</h1></div>
   </body>
+
+  <script src="./resources/app.js"></script>
 </html>
