@@ -5,6 +5,10 @@
   overflow-y: hidden;
 }
 
+.bpw-widget-btn{
+  background-color:white;
+}
+
 @font-face {
   font-family: Determination Sans Web;
   src: url("./font/determinationsanswebregular-369x-webfont.woff");
